@@ -33,10 +33,8 @@ const insertLanguages = async () => {
   }
 }
 
-languagesDB.sync();
-insertLanguages();
-
 module.exports = {
-  languages: languagesDB,
+  languagesDB,
+  insertLanguages,
   languagesList
 };

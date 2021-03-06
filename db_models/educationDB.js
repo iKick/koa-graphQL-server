@@ -2,19 +2,16 @@ const Sequelize = require('sequelize');
 const sequelize = require('../utils/database');
 const dateAt = require('./defaultCreateAtAndUpdateAt');
 const { languagesList } = require('./languagesDB');
-const { studentsList } = require('./studentsDB');
-const { getRandomInt, studentsIds } = require('./helper');
+const { getRandomInt, studentsIds } = require('../helper');
 
 const educationDB = sequelize.define('education', {
   langId: {
-    primaryKey: true,
     allowNull: false,
     type: Sequelize.INTEGER,
   },
   studentId: {
     primaryKey: true,
     allowNull: false,
-
     type: Sequelize.INTEGER,
   },
   ...dateAt,
@@ -31,8 +28,9 @@ const insertEducations = async () => {
     await educationDB.create({studentId, langId: langIds[number]})
   }
 }
-educationDB.sync();
-insertEducations();
 
 
-module.exports = educationDB;
+module.exports = {
+  educationDB,
+  insertEducations,
+};

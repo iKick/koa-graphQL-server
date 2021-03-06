@@ -1,6 +1,7 @@
-const Koa = require('koa')
+const Koa = require('koa');
 const router = require('./routes/router');
-const PORT = 3000;
+const { PORT } = require('./helper');
+
 const app = new Koa();
 
 app.use(router.middleware());

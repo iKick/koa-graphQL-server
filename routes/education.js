@@ -1,5 +1,5 @@
-const Education = require('../db_models/educationDB');
-const { errorMessageObject } = require('../db_models/helper');
+const { Education } = require('../db_models/tablesList');
+const { errorMessageObject } = require('../helper');
 
 module.exports = (router) => {
   router.get('/education', async (ctx) => {

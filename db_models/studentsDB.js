@@ -37,10 +37,8 @@ const insertStudents = async () => {
   }
 }
 
-studentsDB.sync();
-insertStudents();
-
 module.exports = {
-  students: studentsDB,
+  studentsDB,
+  insertStudents,
   studentsList,
 };

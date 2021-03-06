@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../utils/database');
 const dateAt = require('./defaultCreateAtAndUpdateAt');
-const { getRandomInt, studentsIds } = require('./helper');
+const { getRandomInt, studentsIds } = require('../helper');
 
 const ratingsDB = sequelize.define('ratings', {
   studentId: {
@@ -28,7 +28,7 @@ const ratingsGoals = async () => {
   }
 }
 
-ratingsDB.sync();
-ratingsGoals();
-
-module.exports = ratingsDB;
+module.exports = {
+  ratingsDB,
+  ratingsGoals
+};

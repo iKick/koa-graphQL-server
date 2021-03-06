@@ -1,7 +1,6 @@
-const { NO_CONTENT, OK } = require('http-status');
-const { languages: Languages } = require('../db_models/languagesDB');
-const { errorMessageObject } = require('../db_models/helper');
-
+const { NO_CONTENT } = require('http-status');
+const { Languages } = require('../db_models/tablesList');
+const { errorMessageObject } = require('../helper');
 
 module.exports = (router) => {
   router.get('/languages', async (ctx) => {

@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 
+// CREATE SCHEMA school DEFAULT CHARACTER SET utf8;
+// DROP DATABASE school;
 const SCHEMA_NAME = 'school';
 const USER_NAME = 'admin';
 const PASSWORD = '123456789';

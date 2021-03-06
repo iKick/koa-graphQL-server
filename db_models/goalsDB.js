@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../utils/database');
 const dateAt = require('./defaultCreateAtAndUpdateAt');
-const { getRandomInt, studentsIds } = require('./helper');
+const { getRandomInt, studentsIds } = require('../helper');
 
 const goalsDB = sequelize.define('goals', {
   studentId: {
@@ -34,7 +34,8 @@ const insertGoals = async () => {
     await goalsDB.create({studentId, goal: goalsList[number]})
   }
 }
-goalsDB.sync();
-insertGoals();
 
-module.exports = goalsDB;
+module.exports = {
+  goalsDB,
+  insertGoals,
+};
