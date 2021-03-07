@@ -2,7 +2,7 @@ const { Education } = require('../db_models/tablesList');
 const { errorMessageObject } = require('../helper');
 
 module.exports = (router) => {
-  router.get('/education', async (ctx) => {
+  router.get('/getEducation', async (ctx) => {
     const { id, langId: lang } = ctx.query;
     const langId = Number(lang);
     const studentId = Number(id);

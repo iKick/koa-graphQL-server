@@ -4,12 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "lodash": "4.17.21",
     "koa": "2.13.1",
     "koa-router": "10.0.0",
     "sequelize": "6.5.0",
     "mysql2": "2.2.5",
     "supervisor": "0.12.0",
-    "http-status": "1.5.0"
+    "http-status": "1.5.0",
+    "graphql": "15.5.0",
+    "koa-graphql": "0.8.0"
   },
   "scripts": {
     "start_server": "supervisor app"

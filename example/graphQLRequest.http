@@ -1,0 +1,27 @@
+
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "query($studentId: ID){students(studentId: $studentId){studentName}}",
+  "variables": {"studentId": 10}
+}
+
+###
+
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "query($studentId: ID){students(studentId: $studentId){studentName}languages(studentId: $studentId){langName}goals(studentId: $studentId){goal}ratings(studentId: $studentId){rating}}",
+  "variables": {"studentId": 5}
+}
+
+###
+
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "query{ratings{rating studentId}}"
+}

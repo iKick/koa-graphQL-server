@@ -3,7 +3,7 @@ const { Languages } = require('../db_models/tablesList');
 const { errorMessageObject } = require('../helper');
 
 module.exports = (router) => {
-  router.get('/languages', async (ctx) => {
+  router.get('/getLanguages', async (ctx) => {
     const { id, name } = ctx.query;
     const langId = Number(id);
     const langName = name;
