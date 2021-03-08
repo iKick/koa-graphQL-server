@@ -24,6 +24,9 @@ const schema = buildSchema(`
     studentId: ID
     rating: Int
   }
+  type Mutation {
+    addStudent(name: String!): [Student]
+  }
 `);
 
 module.exports = schema;

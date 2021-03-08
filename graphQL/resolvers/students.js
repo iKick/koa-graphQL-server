@@ -25,5 +25,10 @@ module.exports = {
       studentsWithLang.push(student)
     }
     return studentsWithLang
+  },
+  addStudent: async({ name }) => {
+    await Students.create({ studentName: name });
+    const students = await Students.findAll();
+    return students.map(({studentId, studentName}) => ({studentId, studentName}));
   }
 }
