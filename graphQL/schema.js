@@ -9,7 +9,7 @@ const schema = buildSchema(`
   type Student {
     studentId: ID
     studentName: String
-    languages: [Language]
+    language(studentId: ID): Language
   }
   type Language {
     langId: ID
