@@ -2,7 +2,7 @@ const { Students } = require('../db_models/tablesList');
 const { errorMessageObject } = require('../helper');
 
 module.exports = (router) => {
-  router.get('/getStudents', async (ctx) => {
+  router.get('/api/getStudents', async (ctx) => {
     const { id, name } = ctx.query;
     const studentId = Number(id);
     const studentName = name;

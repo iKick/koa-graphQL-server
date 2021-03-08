@@ -1,5 +1,5 @@
 
-POST http://localhost:3000/graphql
+POST http://localhost:3000/api/graphql
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/graphql
+POST http://localhost:3000/api/graphql
 Content-Type: application/json
 
 {
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/graphql
+POST http://localhost:3000/api/graphql
 Content-Type: application/json
 
 {

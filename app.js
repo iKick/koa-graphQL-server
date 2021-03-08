@@ -7,11 +7,10 @@ const rootValue = require('./graphQL/rootResolver');
 
 const app = new Koa();
 
-console.log('app.js, line 10...', rootValue);
 app.use(router.routes()).use(router.allowedMethods());
 app.use(
   router
-    .all('/graphql', graphqlHTTP({
+    .all('/api/graphql', graphqlHTTP({
       schema,
       rootValue,
       graphiql: true
